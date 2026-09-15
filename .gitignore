@@ -1,0 +1,86 @@
+# ============================
+# LaTeX
+# ============================
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.synctex.gz
+*.synctex(busy)
+*.pdfsync
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.loa
+*.mtc
+*.mtc0
+*.slg
+*.stc
+
+# ============================
+# Docker
+# ============================
+
+pgdata/
+postgres-data/
+volumes/
+docker/data/
+
+# Variables de entorno con credenciales
+.env
+.env.local
+.env.*.local
+
+# Logs de contenedores
+*.log
+
+# ============================
+# PostgreSQL
+# ============================
+*.sql~
+*.bak
+*.dump
+*.backup
+
+# ============================
+# Sistema operativo
+# ============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================
+# Editores / IDEs
+# ============================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ============================
+# Otros
+# ============================
+node_modules/
+__pycache__/
+*.pyc
