@@ -2,9 +2,18 @@
 
 ---
 
-**Alumno:** Adrian Damas Garnica
-**Boleta:** 2023630785
+**Alumnos:** 
+- Adrian Damas Garnica
+- 
+- 
+
+**Boletas:** 
+- 2023630785
+- 
+- 
+
 **Grupo:** 3CV4
+
 **Carrera:** Ingenieria en Sistemas Computacionales
 
 ---
