@@ -1,0 +1,186 @@
+% Configuración
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+% Paquetes básicos y de utilidades
+\usepackage{abstract}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{chngcntr}
+\usepackage{csquotes}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fix-cm}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{parskip}
+\usepackage{pgfplots}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{tabularx}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{etoolbox}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+
+% Configuración de páginas y espaciado
+\geometry{margin=1in}
+\setlength{\absleftindent}{0pt}
+\setlength{\absrightindent}{0pt}
+\setlength{\headheight}{15.4pt}
+\setlength{\parskip}{1em}
+\pagestyle{plain}
+
+% Configuración de tikz
+\usetikzlibrary{trees, positioning, arrows.meta}
+\pgfplotsset{compat=1.18}
+
+% Configuración de URLs
+\apptocmd{\UrlBreaks}{\do\/\do-}{}{}
+
+% HYPERREF DEBE IR ANTES DE BIBLATEX PERO DESPUÉS DE CASI TODO
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{xurl} % Debe ir después de hyperref
+
+% BIBLATEX debe ir después de hyperref
+\usepackage[backend=biber, style=ieee, sorting=none]{biblatex}
+
+% Configuración de hyperref
+\hypersetup{
+    pdftitle={Instalación Sistema Operativo},
+    pdfauthor={Adrian Damas Garnica},
+    bookmarksopen=true
+}
+
+% Configuración de bibliografía
+\addbibresource{Bibliografia.bib}
+\defbibheading{bibliography}[\refname]{
+    \section*{#1}
+    \markboth{#1}{#1}
+}
+
+% Configuración de títulos
+\titleformat{\section}
+  {\normalfont\fontsize{16}{19}\bfseries\selectfont}
+  {\thesection}
+  {1em}
+  {}
+\titleformat{\subsection}
+  {\normalfont\fontsize{14}{17}\bfseries\selectfont}
+  {\thesubsection}
+  {1em}
+  {}
+\titleformat{\subsubsection}
+  {\normalfont\fontsize{12}{14}\bfseries\selectfont}
+  {\thesubsubsection}
+  {1em}
+  {}
+
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% Configuración de encabezados
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Configuración de índices
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\addto\captionsspanish{
+  \renewcommand{\tablename}{Tabla}
+}
+
+% Configuración de captions
+\captionsetup[figure]{name=Figura}
+
+% Configuración de anexos
+\newcounter{anexo}
+\renewcommand{\theanexo}{Anexo~\arabic{anexo}}
+
+\newenvironment{anexo}[1][]{
+  \refstepcounter{anexo}
+  \par\noindent\textbf{\theanexo. #1}\par
+}{\par}
+
+% Configuración de nombres especiales
+\renewcommand{\abstractname}{\fontsize{12}{14}\selectfont Resumen}
+\renewcommand{\lstlistlistingname}{\fontsize{12}{14}\selectfont Índice de códigos}
+\renewcommand{\listtablename}{\fontsize{12}{14}\selectfont Índice de tablas}
+
+% Configuración para código C
+\lstdefinestyle{codigoC}{
+    language=C,
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{green!50!black}\itshape,
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=5pt,
+    backgroundcolor=\color{white},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    frame=single,
+    rulecolor=\color{black},
+    tabsize=4,
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=true,
+    morekeywords={size_t, bool, true, false, pragma, omp},
+    literate= % Para caracteres especiales
+        {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+        {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+        {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1 {¡}{{!`}}1}
+
+% Estilo para terminal/consola
+\lstdefinestyle{terminalstyle}{
+    language=bash,
+    basicstyle=\ttfamily\footnotesize\color{white},
+    backgroundcolor=\color{black!90},
+    numbers=none,
+    frame=tb,
+    framerule=0pt,
+    framesep=3pt,
+    rulecolor=\color{gray},
+    xleftmargin=10pt,
+    xrightmargin=10pt,
+    breaklines=true,
+    breakatwhitespace=true,
+    showstringspaces=false,
+    tabsize=2,
+    % Colores para elementos específicos
+    keywordstyle=\color{cyan}, % Comandos
+    commentstyle=\color{green!60}, % Comentarios
+    stringstyle=\color{yellow}, % Rutas y strings
+    morekeywords={sudo, apt, git, python, gcc, make, cd, ls, echo}, % Comandos comunes
+    morecomment=[l]{\#}, % Comentarios con #
+    morestring=[b]", % Strings entre comillas
+    literate= % Caracteres especiales
+        {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+        {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+        {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1 {¡}{{!`}}1
+        {\$}{{\textcolor{green}{\$}}}1 % Prompt de terminal
+        {>}{{\textcolor{green}{>}}}1   % Prompt secundario
+        {*}{{\textcolor{red}{*}}}1     % Wildcards
+        {~}{{\textcolor{blue}{\textasciitilde}}}1 % Directorio home
+}
+
+% Configuracion General Codigos
+\renewcommand{\lstlistingname}{Código}
+
+% Configuración para evitar underfull hboxes
+\hbadness=10000
