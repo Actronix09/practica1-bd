@@ -2,3 +2,132 @@
 
 \section{Caso de Estudio}
 
+En esta sección se abarca la problemática a trabajar a lo largo del semestre para culminarlo en el proyecto final de la materia de bases de datos. La problemática que abarcaremos será un sistema de comandas, siendo nuestro primer cliente un salón de eventos; por lo tanto, la primera instancia del diseño de nuestro sistema estará enfocada en atender las necesidades de este primer cliente.
+
+Además, se ha de aclarar que este proyecto ya tiene un sistema inicial de apoyo, siendo una \emph{interfaz de usuario en terminal} (TUI) hecha con \texttt{ncurses}, la cual se desarrolló en la materia de Sistemas Operativos.
+
+\subsection{Entrevista con el Cliente}
+
+\subsubsection{Eventos y mesas}
+
+\begin{itemize}
+    \item ¿El salón atiende uno o varios eventos simultáneamente?
+    \subitem \textbf{R:}
+
+    \item ¿Cuántas mesas suelen usar por evento?
+    \subitem \textbf{R:}
+
+    \item ¿Esa cantidad varía entre eventos?
+    \subitem \textbf{R:}
+
+    \item ¿Las mesas están numeradas?
+    \subitem \textbf{R:}
+
+    \item ¿Todos los meseros atienden todas las mesas o se le asigna a cada mesero un número de mesas?
+    \subitem \textbf{R:}
+\end{itemize}
+
+\subsubsection{Menú y productos}
+
+\begin{itemize}
+    \item ¿El menú es un todo incluido por evento o se atiende a la carta?
+    \subitem \textbf{R:}
+
+    \item ¿Qué categorías de productos manejan?
+    \subitem \textbf{R:}
+
+    \item ¿Los productos tienen precio fijo?
+    \subitem \textbf{R:}
+
+    \item ¿Se manejan variantes de platillos?
+    \subitem \textbf{R:}
+
+    \item ¿Se necesitan registrar ingredientes o alérgenos por producto, o solo nombre y precio?
+    \subitem \textbf{R:}
+
+    \item ¿El menú cambia por temporada o es fijo todo el año?
+    \subitem \textbf{R:}
+\end{itemize}
+
+\subsubsection{Flujo de comandas}
+
+\begin{itemize}
+    \item ¿Cómo levantan hoy en día una comanda? (papel, apps sueltas, ninguno)
+    \subitem \textbf{R:}
+
+    \item ¿Quién toma la orden: el mesero en la mesa o se centraliza en un punto?
+    \subitem \textbf{R:}
+
+    \item ¿La comanda va directo a cocina o bar, o pasa por un supervisor?
+    \subitem \textbf{R:}
+
+    \item ¿Se necesita un estado para la comida? (pendiente, en preparación, lista, entregada, cancelada)
+    \subitem \textbf{R:}
+
+    \item ¿Puede una mesa hacer varias rondas de pedidos durante un evento?
+    \subitem \textbf{R:}
+
+    \item ¿Se registran notas especiales por pedido?
+    \subitem \textbf{R:}
+
+    \item ¿Quién puede cancelar o modificar una comanda ya enviada a cocina o bar?
+    \subitem \textbf{R:}
+\end{itemize}
+
+\subsubsection{Cobros y pagos}
+
+\begin{itemize}
+    \item ¿El cobro se hace al organizador del evento en una sola cuenta, o se divide por mesa, por invitado o por grupo de invitados?
+    \subitem \textbf{R:}
+
+    \item ¿Manejan anticipos o depósitos antes del evento?
+    \subitem \textbf{R:}
+
+    \item ¿Qué formas de pago se aceptan y necesitan quedar registradas?
+    \subitem \textbf{R:}
+
+    \item ¿Se requiere factura fiscal (CFDI) o solo un recibo interno?
+    \subitem \textbf{R:}
+
+    \item ¿Hay productos incluidos en el paquete que no se cobren aparte?
+    \subitem \textbf{R:}
+
+    \item De ser así, ¿el consumo extra sí se cobra?
+    \subitem \textbf{R:}
+\end{itemize}
+
+\subsubsection{Roles y permisos}
+
+\begin{itemize}
+    \item ¿Qué roles existen y qué debe poder hacer cada uno en el sistema? (mesero, cocina, bar, cajero, administrador)
+    \subitem \textbf{R:}
+
+    \item ¿Se necesita saber qué mesero levantó cada comanda?
+    \subitem \textbf{R:}
+\end{itemize}
+
+\subsubsection{Reportes}
+
+\begin{itemize}
+    \item ¿Qué reportes necesita el negocio? (ventas por evento, estadísticas por producto, tiempo promedio de preparación, ingresos por periodo)
+    \subitem \textbf{R:}
+
+    \item ¿Necesita comparar el consumo real contra lo presupuestado en el paquete del evento?
+    \subitem \textbf{R:}
+
+    \item ¿Con qué frecuencia se consultan estos reportes? (durante el evento en vivo o solo en el cierre)
+    \subitem \textbf{R:}
+\end{itemize}
+
+\subsubsection{Operación y escalabilidad}
+
+\begin{itemize}
+    \item ¿Cuántos eventos atienden en promedio al mes y cuántas comandas por evento?
+    \subitem \textbf{R:}
+
+    \item ¿El sistema debe funcionar sin internet dentro del salón, o siempre tienen conexión?
+    \subitem \textbf{R:}
+
+    \item ¿Planean usar el sistema en otra sucursal a futuro?
+    \subitem \textbf{R:}
+\end{itemize}
