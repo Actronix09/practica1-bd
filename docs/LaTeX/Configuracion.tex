@@ -51,7 +51,9 @@
 \usepackage{xurl} % Debe ir después de hyperref
 
 % BIBLATEX debe ir después de hyperref
-\usepackage[backend=biber, style=ieee, sorting=none]{biblatex}
+% Estilo APA 7.ª edición (biblatex-apa) con citas autor-fecha
+\usepackage[backend=biber, style=apa, sorting=nyt, sortcites=true, uniquename=false, backref=false]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
 
 % Configuración de hyperref
 \hypersetup{
