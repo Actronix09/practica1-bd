@@ -9,18 +9,30 @@
 
 \subsection{Planteamiento del problema}
 
+Los salones de eventos que ofrecen servicio de banquetes suelen gestionar la toma y el seguimiento de comandas --los pedidos de alimentos y bebidas realizados por cada mesa o por cada invitado durante un evento-- de forma manual, apoyándose en comandas de papel, hojas de cálculo o aplicaciones genéricas que no fueron diseñadas para este giro de negocio. Esta forma de operar genera problemas concretos: la información de los pedidos se duplica o se pierde entre el área de meseros, cocina y caja; no existe un registro histórico confiable de qué se sirvió en cada evento, a qué cliente y a qué costo; el control de existencias de insumos se lleva de manera aproximada, lo que provoca faltantes o compras innecesarias; y la elaboración de la cuenta final de cada evento es lenta y propensa a errores porque depende de conciliar manualmente varias comandas en papel.
+
+Este proyecto retoma y da continuidad a un desarrollo realizado en un semestre anterior, en el que se propuso un primer sistema de comandas de uso general. Sin embargo, aquella versión inicial se apoyaba en un sistema enteramente en C y este unicamente trabajaba con archivos en formato ASCII para almacenar la información, esto causa que dicho sistema tenga relaciones mal definidas, escasa normalización y ausencia de reglas de integridad, lo que dificultaba su mantenimiento y su crecimiento. Por ello, el problema que atiende la presente práctica no es únicamente digitalizar la toma de comandas, sino rediseñar, con una metodología formal de modelado entidad-relación, la base de datos que sustenta dicho sistema, de modo que sea capaz de representar correctamente eventos, clientes, mesas, menús, platillos, insumos, meseros y pagos, garantizando consistencia, integridad y escalabilidad de la información, de esta forma concretar con un sistema profesional y funcional para nuestro proyecto final de la materia de bases de datos.
 
 \subsection{Justificación}
 
+El diseño de una base de datos robusta para un sistema de comandas resulta pertinente porque este tipo de sistema constituye el núcleo operativo de un salón de eventos: de él dependen la asignación de mesas, el control de los pedidos por evento, la disponibilidad de insumos y, en última instancia, la facturación al cliente. Un modelo de datos mal estructurado no solo genera inconsistencias en la información, sino que limita la capacidad del sistema para escalar a medida que el negocio crece o para adaptarse a nuevos requerimientos, como el manejo de menús personalizados, distintos tipos de evento o reportes administrativos.
+
+Desde el punto de vista académico, esta práctica es relevante porque permite aplicar de forma integral los conceptos revisados a la fecha en la materia de Bases de Datos --definición de una base de datos, implementación de una base de datos, modelos entidad relación, uso de docker y uso de PostgreSQL-- a un caso de estudio real y ya conocido por el equipo, lo que facilita identificar con claridad los errores de diseño cometidos previamente y corregirlos mediante un modelo entidad-relación formal, con entidades, atributos, relaciones y cardinalidades correctamente definidas.
+
+Desde el punto de vista práctico, contar con una base de datos bien diseñada beneficia directamente la operación de un salón de eventos: reduce el tiempo de atención al reducir errores en la toma de comandas, permite conocer con precisión el costo y las existencias de insumos por evento, y facilita la generación de reportes confiables para la toma de decisiones administrativas, sentando además una base sólida sobre la cual continuar el desarrollo del sistema en etapas posteriores del proyecto.
 
 \subsection{Objetivo general}
 
-
+Diseñar el modelo entidad-relación de una base de datos para un sistema de comandas de un salón de eventos, que permita gestionar de manera íntegra y consistente la información de clientes, eventos, mesas, menús, platillos, insumos, meseros y pagos, con el fin de sustentar una versión mejorada del sistema desarrollado previamente.
 
 \subsection{Objetivos específicos}
 
 \begin{enumerate}[label=\arabic*.]
-    \item 
+    \item Investigar y comparar la definición formal de dato, información y base de datos, así como las características fundamentales de un sistema gestor de bases de datos.
+    \item Identificar y documentar, mediante una entrevista con el cliente, los requerimientos de información y las funciones que debe cumplir el sistema de comandas del salón de eventos.
+    \item Analizar las deficiencias de diseño presentes en la base de datos del proyecto realizado en el semestre anterior, con el fin de evitarlas en la nueva propuesta.
+    \item Construir el diagrama entidad-relación del sistema de comandas, incluyendo entidades, atributos, relaciones y cardinalidades.
+    \item Justificar las decisiones de diseño del modelo propuesto, explicando cómo cada entidad y relación contribuye a resolver la problemática planteada.
 \end{enumerate}
 
 
@@ -30,9 +42,11 @@
 
 \subsection{Productos esperados}
 
-
+Como resultado de esta práctica se espera obtener un conjunto de entregables documentales y técnicos que evidencien tanto el proceso de investigación como el diseño de la base de datos del sistema de comandas.
 
 Los productos esperados son:
 \begin{itemize}[noitemsep]
-    \item 
+     \item Descripción del caso de estudio, incluyendo la entrevista con el cliente y la lista de requerimientos del sistema de comandas.
+    \item Diagrama entidad-relación del sistema de comandas para el salón de eventos, con entidades, atributos, relaciones y cardinalidades.
+    \item Las bases de la implementación de la base de datos para el proyecto final.
 \end{itemize}

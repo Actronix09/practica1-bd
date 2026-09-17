@@ -90,6 +90,11 @@ Con este proceso se busca:
 - Compartir conocimiento entre ramas
 - Detectar vulnerabilidades o datos sensibles
 
+
+
+
+
+
 ## Referencias
 
 - Atlassian. (n.d.). *Git feature branch workflow.* Atlassian Git Tutorials. Recuperado el 16 de septiembre de 2026, de https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow

@@ -28,11 +28,17 @@
 \usepackage{url}
 \usepackage{xcolor}
 \usepackage{etoolbox}
-\usepackage{newtxtext}
-\usepackage{newtxmath}
+\usepackage{setspace}
+
+% Tipografía: Arial 11 pt
+% (Nimbus Sans/Helvetica es métricamente compatible con Arial en pdfLaTeX)
+\usepackage{newtxsf}            % Matemáticas sans-serif a juego
+\usepackage[scaled=1]{helvet}   % Helvetica/Arial
+\renewcommand{\familydefault}{\sfdefault}
 
 % Configuración de páginas y espaciado
-\geometry{margin=1in}
+\geometry{a4paper, margin=2.5cm}
+\setstretch{1.15}          % Interlineado 1.15
 \setlength{\absleftindent}{0pt}
 \setlength{\absrightindent}{0pt}
 \setlength{\headheight}{15.4pt}
