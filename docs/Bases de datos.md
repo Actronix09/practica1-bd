@@ -49,3 +49,52 @@ Elmasri & Navathe (2016), p.20. Los datos almacenados tienen la propiedad de per
 Date. (2002), p.9 & 10. De forma precisa decimos que los datos de la base de datos "persisten" debido a que una vez son aceptados por el SGBD solo pueden ser removidos por una peticion al SGBD, pero no como un efecto lateral (por ejemplo) algun programa termine su ejecucion
 
 En ambas citas los autores nos plantean ideas simirales, que dentro de un SGBD los datos y la informacion persisten y esta persistencia siempre estara presente sin importar las ejecuciones que haga la aplicacion donde se aloja el SGBD, y esta persistencia solo cambiara por medio de peticiones directas al SGBD.
+
+### 3. Redundancia controlada
+
+Elmasri & Navathe. (2016). p.17 & 18. Aunque la norma es eliminar la duplicacion mediante la normalizacion, cuando es necesario duplicar datos de forma intencional para acelerar las consultas el SGBD aplica una redundancia ontrolada para asegurar que el cambio se haga correctamente por igual entre sus copias
+
+Silberschatz, Korth & Sudarshan. (Año: 2002), p.4. Consiste en evitar la duplicación innecesaria de información propia de los sistemas de archivos tradicionales para prevenir inconsistencias; si existe redundancia por diseño, el SGBD mantiene la sincronización
+
+Los autores Elmasri y Navathe profundizan mas en el aspecto de como funciona dicha duplicidad y en la otra cita se profundicza como se mantiene una sincronizacion dentro del SGBD
+
+### 4. independencia de datos
+
+Elmasri & Navathe, (2016), pp. 19–20: Garantiza que los datos cumplan con las restricciones de integridad como la clave primaria definidas en el catálogo del sistema, las cuales el SGBD valida automáticamente en cada actualización
+
+(Silberschatz et al., 2002, p. 5): La integridad asegura la corrección y consistencia de los datos mediante el cumplimiento estricto de reglas de validación como claves primarias especificadas por el administrador.
+
+En este caso loa autores dan la misma idea, donde cierta informacion especifica (describen la clave primaria como ejemplo) tienen que cumplir con la caracteristica de integridad
+
+### 5. Independencia de datos
+
+Elmasri & Navathe, (2016), p12, 36–38. Es la separación entre los programas de aplicación y los datos gracias a la abstracción. Incluye la independencia física (modificar el almacenamiento sin alterar el esquema conceptual) y la independencia lógica (alterar el esquema conceptual sin modificar las aplicaciones externas)
+
+**Silberschatz, Korth &amp; Sudarshan [Año: 2002, p. 11]** *(Silberschatz et al., 2002, p. 11)*: Capacidad de alterar el esquema físico o lógico sin requerir la reescritura ni modificación de los programas de aplicación que acceden a la base de datos
+
+En la primer cita profundiza mas sobre cuales son las partes del sistema no interfieren con los datos, ya sea de forma fisica y/o logica, en la segunda cita es mas clara y directa.
+
+### 6. Seguridad
+
+*Elmasri &amp; Navathe, 2016, p. 21)*: Protección del sistema contra accesos no autorizados o malintencionados mediante controles de acceso discrecionales (`GRANT`/`REVOKE`), obligatorios (por niveles), cifrado de datos y defensa contra amenazas como la inyección SQL
+
+*(Silberschatz et al., 2002, p. 5)*: Mecanismos del SGBD que restringen el acceso a la información únicamente a los usuarios autorizados, otorgando privilegios específicos de lectura, modificación o ejecución
+
+Ambos autores nos hablan de como el SGBD tiene diferentes mecanismos de seguridad para con el usuario, en la primera profundiza mas en los controles de acceso.
+
+### 7. Concurrencia
+
+**Elmasri &amp; Navathe [Año: 2016, pp. 13–14, 21]** *(Elmasri &amp; Navathe, 2016, pp. 13–14, 21)*: Permite que múltiples usuarios y transacciones modifiquen la base de datos simultáneamente. El subsistema de control de concurrencia aplica bloqueos o marcas de tiempo para garantizar la atomicidad y el aislamiento de las operaciones
+
+**Silberschatz, Korth &amp; Sudarshan [Año: 2002, p. 5]** *(Silberschatz et al., 2002, p. 5)*: Supervisión del acceso simultáneo a los datos que evita anomalías o inconsistencias (como lecturas sucias o actualizaciones perdidas), logrando que las ejecuciones concurrentes equivalgan a ejecuciones seriales
+
+En la segunda cita se describe las consecuencias concretas que pueden pasar en caso de una falta de supervision del sistema. En la primer cita se describe mejor la caracteristica
+
+### 8. Recuperacion
+
+**Elmasri &amp; Navathe [Año: 2016, p. 21]** *(Elmasri &amp; Navathe, 2016, p. 21)*: Capacidad del SGBD para restaurar la base de datos a un estado consistente tras un fallo de hardware, software o sistema, utilizando registros en bitácora (*log*), operaciones `UNDO`/`REDO` e hitos de control
+
+**Silberschatz, Korth &amp; Sudarshan [Año: 2002, p. 5]** *(Silberschatz et al., 2002, p. 5)*: Conjunto de algoritmos que garantizan las propiedades de atomicidad y durabilidad, deshaciendo los cambios de transacciones no terminadas y asegurando la persistencia de las transacciones confirmadas ante fallos
+
+Ambas citas describen muy bien la caracteristica, pero en la primera se describen las operaciones concretas para ponerlas en practica
+
