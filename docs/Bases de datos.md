@@ -2,13 +2,6 @@
 
 ## Tabla de Contenidos
 
-- [Diferencias entre contenedor y maquina virtual](#diferencias-entre-contenedor-y-maquina-virtual)
-- [Imagen](#imagen)
-- [Contenedor](#contenedor)
-- [Volumen](#volumen)
-- [Puerto publicado](#puerto-publicado)
-- [Referencias](#referencias)
-
 ---
 ## ¿Que es un dato?
 
