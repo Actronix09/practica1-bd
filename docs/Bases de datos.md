@@ -272,3 +272,14 @@ De acuerdo con Elmasri y Navathe (2016, pp. 33–34), los modelos se ordenan en 
 **Modelos de datos de representación o implementación:** Se sitúan en un punto intermedio: son comprensibles para los usuarios finales, pero se corresponden directamente con las estructuras organizativas que implementan los motores comerciales (Elmasri y Navathe, 2016, p. 33). Ocultan los detalles de almacenamiento en sectores de disco, pero representan los datos mediante estructuras de registros o tablas (Elmasri y Navathe, 2016, p. 33).
 
 **Modelos de datos físicos:** Describen cómo se almacenan físicamente los datos en los medios secundarios (discos magnéticos o unidades de estado sólido) (Elmasri y Navathe, 2016, p. 33). Como especifican Elmasri y Navathe (2016), "los modelos de datos físicos describen cómo se almacenan los datos como archivos en la computadora representando información como formatos de registro, ordenamiento de registros y rutas de acceso" (p. 34).
+
+## Referencias bibliograficas 
+Bellinger, G., Castro, D., & Mills, A. (2004). Data, information, knowledge, and wisdom. Universidade Federal de Minas Gerais (UFMG). https://homepages.dcc.ufmg.br/~amendes/SistemasInformacaoTP/TextosBasicos/Data-Information-Knowledge.pdf
+
+Chen, P. P.-S. (1976). The entity-relationship model—toward a unified view of data. ACM Transactions on Database Systems (TODS), 1(1), 9–36. https://doi.org/10.1145/320434.320440
+
+Date, C. J. (2001). Introducción a los sistemas de bases de datos (S. L. M. Ruíz Faudón, Trad.; 7.ª ed.). Pearson Educación.
+
+Elmasri, R., & Navathe, S. B. (2016). Fundamentals of database systems (7.ª ed.). Pearson.
+
+Silberschatz, A., Korth, H. F., & Sudarshan, S. (2002). Database system concepts: Instructor’s manual (4.ª ed.). McGraw-Hill Higher Education.
